@@ -1,20 +1,129 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html lang="en">
+
     <head>
-        <title>Home</title>
+        <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: url('Image/giphy.gif') fixed;
+                background-size: cover;
+            }
+
+            .navbar {
+                background-image: url('Image/WebsiteHeader.png');
+                background-size: cover;
+                height: 100px;
+            }
+
+            .btn.btn-light {
+                border: none;
+                background-color: #865193;
+                color: white;
+                height: 40px;
+                width: 120px;
+                border-radius: 20px;
+            }
+
+            .navbar-nav .nav-item {
+                margin-right: 10px;
+            }
+
+            .brand-text {
+                margin-left: 10px; /* Adjust for smaller screens */
+                font-size: 24px;
+                color: white;
+                margin-left: 210px;
+            }
+
+            .form {
+                width: 1200px;
+                height: 450px;
+                margin: auto;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 70px; /* Add margin for better spacing */
+                background: url('Image/GamingEffect2.png');
+                background-size: cover;
+                color:white;
+                font-family: Impact;
+            }
+
+            /* Add styles for the footer */
+            .footer {
+                background-color: #865193;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+
+            /* Responsive styles */
+            @media (max-width: 767px) {
+                .navbar {
+                    height: 70px; /* Adjust the height for smaller screens */
+                }
+
+                .brand-text {
+                    margin-left: 5px; /* Adjust for smaller screens */
+                }
+            }
+        </style>
     </head>
+
     <body>
-        <div>
-            
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+            <div class="container-fluid">
+                <div class="brand-text">
+                    Navigation
+                </div>
+                <div class="container-fluid">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="btn btn-light" href="#section1">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="btn btn-light" href="#section2">Our Staff</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="btn btn-light" href="#section3">Hall of Fame</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="btn btn-light" href="#section4">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <br><br><br>
+
+        <form class="form">
+            <div style="height:300px; width:500px; background-color:transparent;">
+                <br><br><br>
+                <h2>Join the official</h2>
+                <h1>Nova Hotels X server!</h1>
+                <br>
+                <a href="YOUR_DISCORD_INVITE_LINK" target="_blank" class="btn btn-light" style="background-color: transparent; width: 100px; height: 50px; border-radius: 0px; border: 1.5px solid white; color: white; display: flex; align-items: center; justify-content: center; margin: auto;">Join Now!</a>
+            </div>
+        </form>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
         </div>
-        <h2>Hi!</h2>
+
     </body>
+
 </html>
