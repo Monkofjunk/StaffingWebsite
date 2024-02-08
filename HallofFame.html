@@ -236,9 +236,10 @@ const HallofFame = [
 
         // Event listener for the search input
         document.getElementById('searchInput').addEventListener('input', function () {
-            const searchTerm = this.value.trim();
-            filterCards(searchTerm);
-        });
+    const searchTerm = this.value.trim();
+    const selectedYear = document.getElementById('yearSelect').value;
+    filterCards(searchTerm, selectedYear);
+});
         
         document.getElementById('yearSelect').addEventListener('change', function () {
             const searchTerm = document.getElementById('searchInput').value.trim();
