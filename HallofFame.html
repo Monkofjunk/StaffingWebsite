@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: url('Image/giphy.gif') fixed;
+                background-size: cover;
+            }
+
+            .navbar {
+                background-image: url('Image/WebsiteHeader1.png');
+                background-size: cover;
+                height: 100px;
+            }
+
+            .btn.btn-light {
+                border: none;
+                background-color: #865193;
+                color: white;
+                height: 40px;
+                width: 120px;
+                border-radius: 20px;
+            }
+
+            .navbar-nav .nav-item {
+                margin-right: 10px;
+            }
+
+            .navbar-brand {
+                display: inline-flex;
+                align-items: center;
+            }
+
+            .brand-text {
+                font-size: 24px;
+                color: white;
+                margin-left: 20px;
+            }
+            
+            .department-logo {
+                margin-left: 20px;
+                width:70px;
+                height:70px;
+            }
+
+            .form {
+                width: 1200px;
+                height: 450px;
+                margin: auto;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 70px; /* Add margin for better spacing */
+                background: url('Image/GamingEffect2.png');
+                background-size: cover;
+                color:white;
+            }
+            
+            #searchInput {
+            width: 170px;
+            height: 30px;
+            margin-top:20px;
+            margin-bottom: 20px;
+            border: 2px solid #865193; /* Border color */
+            border-radius: 20px; /* Rounded corners */
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            outline: none; /* Remove default outline */
+            text-align: center;
+            margin-left:10px;
+           }
+           
+           .yeardropdown {
+               width: 170px;
+               height:30px;
+               margin-top: 20px; 
+               margin-bottom: 20px; 
+               border: 2px solid #865193; 
+               border-radius: 20px; 
+               background-color: black; 
+               color: white; 
+               outline: none;
+               text-align: center;
+           }
+            
+            .Hall-content {
+                overflow-y: scroll;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .Hall-content::-webkit-scrollbar {
+                display: none; /* Hide the scroll bar */
+            }
+            
+            .card {
+                background-color: transparent;
+                width: 90%;
+                margin: 10px auto;
+                padding: 10px;
+                border-radius: 10px;
+                border-color:#865193;
+            }
+
+            /* Add styles for the footer */
+            .footer {
+                background-color: #865193;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+
+            /* Responsive styles */
+            @media (max-width: 767px) {
+                .navbar {
+                    height: 70px; /* Adjust the height for smaller screens */
+                }
+
+                .brand-text {
+                    margin-left: 5px; /* Adjust for smaller screens */
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <img class="department-logo" src="Image/MascotLogo.png">
+                    <div class="brand-text">Nova Staffing | Hall of Fame</div>
+                </div>
+                <div class="container-fluid">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="btn btn-light" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="btn btn-light" href="OurStaff.html">Our Staff</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="btn btn-light" href="HallofFame.html">Hall of Fame</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="btn btn-light" href="Contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <br><br><br>
+
+        <form class="form">
+            <div class="Hall-content" style="height:360px; width:700px; background-color:transparent;">
+                <select class="yeardropdown" id="yearSelect">
+                    <option value="all">Search by Year</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                </select>
+                <input type="text" id="searchInput" placeholder="Search by Username">
+            <div class="Hall-content" style="height:300px; width:680px; background-color:transparent;">
+                <div id="cardContainer"></div>
+            </div>
+            </div>
+        </form>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.js"></script>
+        <script>         
+const HallofFame = [
+            { Image: "Hall/Pattern.png", Username: "xPatt_ern", YearResigned: "2023", FormerRole: "Head of Staffing and Board of Administration", Description: "Pattern was a highly positive individual that many looked up to. Throughout his time within the department and establishment, he has inspired many to strive further and achieve their goals in Nova, and has left an impact on all of us through his leadership and guidance. He was always willing to provide us a listening ear, when we were facing difficulties, and never once complaint about anything. His dedication, commitment and presence will always be cherished, and remembered by many." },
+            { Image: "Hall/Popy.png", Username: "popyvn18", YearResigned: "2022", FormerRole: "Head of Staffing and Board of Administration", Description: "Popy, also well known as popyvn18, led the Staffing Department for 9+ months. She was an incredible leader who overcame many challenges during her career, as well as an amazing person with so much potential, kindness, and dedication. She inspired many, including myself, and never failed to spread positivity. Without her, Staffing wouldn't be where it is today! We all love and appreciate this outstanding individual for who she is, and what she has achieved." },
+            { Image: "Hall/Sadie.png", Username: "xSad_ie", YearResigned: "2022", FormerRole: "Head of Staffing and Board of Administration", Description: "Sadie was such an invaluable role model. She led the Staffing Department for nearly a year, and never failed to make us all smile! While juggling multiple tasks and many departments, she was an amazing leader who worked above and beyond to meet the community's expectations. If it weren't for her, Staffing would not be where it is today! She helped the community in many ways, and her contributions will forever be cherished. Her everyday presence and charming attitude were truly one of a kind!" },
+        ];
+
+        // Function to create card HTML
+        function createCard(data) {
+            return `
+            <div class="card">
+                <br>
+                <img src="${data.Image}" style="max-width: 100px; margin: auto; margin-bottom:10px;">
+                <h5>${data.Username}</h5>
+                <p>Former Role: ${data.FormerRole}.</p>
+                <p>Year Resigned: ${data.YearResigned}.</p>
+                <p>${data.Description}</p>
+            </div>
+            `;
+        }
+
+        // Function to render cards
+       function renderCards(cards) {
+            const cardContainer = document.getElementById('cardContainer');
+            cardContainer.innerHTML = cards.map(createCard).join('');
+        }
+
+        // Call renderCards function to generate cards
+        function filterCards(searchTerm, selectedYear) {
+            let filteredCards = HallofFame;
+
+            if (selectedYear !== 'all') {
+                filteredCards = filteredCards.filter(card => card.YearResigned === selectedYear);
+            }
+
+            if (searchTerm.trim() !== '') {
+                filteredCards = filteredCards.filter(card =>
+                    card.Username.toLowerCase().includes(searchTerm.toLowerCase())
+                );
+            }
+
+            renderCards(filteredCards);
+        }
+
+        // Event listener for the search input
+        document.getElementById('searchInput').addEventListener('input', function () {
+            const searchTerm = this.value.trim();
+            filterCards(searchTerm);
+        });
+        
+        document.getElementById('yearSelect').addEventListener('change', function () {
+            const searchTerm = document.getElementById('searchInput').value.trim();
+            const selectedYear = this.value;
+            filterCards(searchTerm, selectedYear);
+        });
+
+        renderCards(HallofFame);
+
+        </script>
+    </body>
+
+</html>

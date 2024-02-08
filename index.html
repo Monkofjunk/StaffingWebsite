@@ -15,7 +15,7 @@
             }
 
             .navbar {
-                background-image: url('Image/WebsiteHeader.png');
+                background-image: url('Image/WebsiteHeader1.png');
                 background-size: cover;
                 height: 100px;
             }
@@ -33,11 +33,21 @@
                 margin-right: 10px;
             }
 
+            .navbar-brand {
+                display: inline-flex;
+                align-items: center;
+            }
+
             .brand-text {
-                margin-left: 10px; /* Adjust for smaller screens */
                 font-size: 24px;
                 color: white;
-                margin-left: 210px;
+                margin-left: 20px;
+            }
+            
+            .department-logo {
+                margin-left: 20px;
+                width:70px;
+                height:70px;
             }
 
             .form {
@@ -82,25 +92,26 @@
     <body>
         <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
             <div class="container-fluid">
-                <div class="brand-text">
-                    Navigation
+                <div class="navbar-brand">
+                    <img class="department-logo" src="Image/MascotLogo.png">
+                    <div class="brand-text">Nova Staffing | Home</div>
                 </div>
                 <div class="container-fluid">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="btn btn-light" href="#section1">Home</a>
+                            <a class="btn btn-light" href="index.html">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="btn btn-light" href="#section2">Our Staff</a>
+                            <a class="btn btn-light" href="OurStaff.html">Our Staff</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="btn btn-light" href="#section3">Hall of Fame</a>
+                            <a class="btn btn-light" href="HallofFame.html">Hall of Fame</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="btn btn-light" href="#section4">Contact</a>
+                            <a class="btn btn-light" href="Contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -115,7 +126,7 @@
                 <h2>Join the official</h2>
                 <h1>Nova Hotels X server!</h1>
                 <br>
-                <a href="YOUR_DISCORD_INVITE_LINK" target="_blank" class="btn btn-light" style="background-color: transparent; width: 100px; height: 50px; border-radius: 0px; border: 1.5px solid white; color: white; display: flex; align-items: center; justify-content: center; margin: auto;">Join Now!</a>
+                <a href="https://discord.com/invite/nova" target="_blank" class="btn btn-light" style="background-color: transparent; width: 100px; height: 50px; border-radius: 0px; border: 1.5px solid white; color: white; display: flex; align-items: center; justify-content: center; margin: auto;">Join Now!</a>
             </div>
         </form>
 
@@ -123,7 +134,6 @@
         <div class="footer">
             <p>&copy; 2023 Your Website. All rights reserved.</p>
         </div>
-
     </body>
 
 </html>
